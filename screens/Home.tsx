@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ScreenName } from '../types';
 
@@ -29,7 +30,7 @@ export const HomeScreen: React.FC<HomeProps> = ({ onNavigate }) => {
           <div className="p-4 flex flex-col gap-2">
             <h3 className="font-bold text-lg text-gray-900">Próximo Torneo de Verano</h3>
             <p className="text-sm text-gray-500 line-clamp-2">Inscríbete ahora y compite por el gran premio de $5000 USD.</p>
-            <button onClick={() => onNavigate(ScreenName.TOURNNAMENTS)} className="mt-2 self-start px-4 py-2 bg-primary/20 text-green-800 text-sm font-bold rounded-lg hover:bg-primary/30 transition-colors">
+            <button onClick={() => onNavigate(ScreenName.TOURNAMENTS)} className="mt-2 self-start px-4 py-2 bg-primary/20 text-green-800 text-sm font-bold rounded-lg hover:bg-primary/30 transition-colors">
               Ver Más
             </button>
           </div>
@@ -50,7 +51,7 @@ export const HomeScreen: React.FC<HomeProps> = ({ onNavigate }) => {
       <div className="grid grid-cols-2 gap-3 px-4 py-4">
         {[
           { icon: 'sports_tennis', title: 'Reservar', subtitle: 'Encuentra horario', screen: ScreenName.BOOK_COURT },
-          { icon: 'emoji_events', title: 'Torneos', subtitle: 'Competencias', screen: ScreenName.TOURNNAMENTS },
+          { icon: 'emoji_events', title: 'Torneos', subtitle: 'Competencias', screen: ScreenName.TOURNAMENTS },
           { icon: 'newspaper', title: 'Noticias', subtitle: 'Novedades', screen: ScreenName.NEWS },
           { icon: 'medical_services', title: 'Agendar Cita', subtitle: 'Salud y bienestar', screen: ScreenName.SPECIALISTS },
         ].map((item, idx) => (

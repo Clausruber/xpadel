@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { BottomNav } from './components/Navigation';
 import { HomeScreen } from './screens/Home';
@@ -54,7 +55,7 @@ export default function App() {
         return <NewsDetailScreen onBack={handleBack} />;
       case ScreenName.PROFILE:
         return <ProfileScreen onBack={handleBack} />;
-      case ScreenName.TOURNNAMENTS:
+      case ScreenName.TOURNAMENTS:
         return <TournamentsScreen onBack={handleBack} />;
       case ScreenName.BOOK_COURT:
         return <BookCourtScreen onBack={handleBack} onNavigate={handleNavigate} />;
@@ -78,6 +79,7 @@ export default function App() {
   return (
     <div className="mx-auto max-w-md bg-white min-h-screen shadow-2xl relative overflow-hidden">
       {renderScreen()}
+      
       {showBottomNav && (
         <BottomNav currentScreen={currentScreen} onNavigate={handleNavigate} />
       )}
